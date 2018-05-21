@@ -1,0 +1,17 @@
+﻿
+@{
+   ViewBag.Title = "Tangle tangle rectangle";
+}
+
+<h2>@ViewBag.Title</h2>
+<script>
+   var canvas = document.getElementById("idCanvas");
+   var ctx = canvas.getContext("2d");
+   ctx.fillStyle = 'green';
+   ctx.fillRect(0, 0, @ViewData["width"], @ViewData["height"]);
+</script>
+
+
+
+
+

@@ -1,0 +1,20 @@
+﻿
+@{
+   ViewBag.Title = "Life is a circle mate! This time with a radius of " + ViewData["radius"] + "px";
+}
+
+<h2>@ViewBag.Title</h2>
+ <script type="text/javascript" src="@Url.Content("/Scripts/jquery-1.10.2.min.js")"></script>
+   <script>
+      var canvas = document.getElementById("idCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc( ctx.canvas.width/2,  ctx.canvas.height/2, @ViewData["radius"], 0, 2 * Math.PI);
+      ctx.fillStyle = 'green';
+      ctx.fill();
+      ctx.stroke();
+   </script>
+
+
+
+

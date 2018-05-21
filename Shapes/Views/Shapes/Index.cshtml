@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Shape";
+}
+<canvas id="idCanvas" width="500" height="500">
+       
+   Your browser does not support the canvas element.
+</canvas>
+
+@if (@ViewData["Error"] == null)
+{
+   Html.RenderPartial( ViewData["shapeViewPath"].ToString());
+}
+else
+{
+   <h2 style="color: red">@ViewData["Error"]</h2>
+}
+

@@ -1,0 +1,20 @@
+﻿@{
+   ViewBag.Title = "2 equal halves";
+}
+
+<h2>@ViewBag.Title</h2>
+<script>
+   var canvas = document.getElementById("idCanvas");
+   var ctx = canvas.getContext("2d");
+   ctx.fillStyle = 'green';
+   ctx.moveTo(0, 0);
+   ctx.lineTo(@ViewData["width"], 0); 
+   ctx.lineTo(@ViewData["width"] / 2, @ViewData["height"]);
+   ctx.fill();  
+</script>
+
+
+
+
+
+

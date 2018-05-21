@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="divShape">
+   <p>Enter the statement specifying shape to draw</p>
+   <textarea id="Text1" type="text" cols="40" rows="5" data-bind="value: userText"></textarea>
+   <input id="btnDraw" type="button" value="Draw" onclick="drawShape()"/>
+</div>
+
+@section scripts
+{
+   <script type="text/javascript" src="@Url.Content("/Scripts/knockout-min.js")"></script>
+   <script type="text/javascript" src="@Url.Content("/Scripts/viewModel/shapesViewModel.js")"></script>
+
+   <script type="text/javascript">
+
+      ko.applyBindings(new ShapesViewModel());
+   
+   </script>
+}
